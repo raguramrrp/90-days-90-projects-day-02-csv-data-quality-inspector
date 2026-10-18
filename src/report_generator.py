@@ -217,113 +217,126 @@ def generate_html_report(
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dataset Quality Report — {metadata.get('filename', 'dataset.csv')}</title>
+    <title>Dataset Quality Report // {metadata.get('filename', 'dataset.csv')}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {{
-            --bg: #f8fafc;
-            --surface: #ffffff;
-            --border: #e2e8f0;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --primary: #2563eb;
+            --bg: #090d16;
+            --surface: #0f1523;
+            --surface-card: #131b2e;
+            --border: #1e293d;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #06b6d4;
+            --accent-cyan: #38bdf8;
         }}
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text-main);
-            padding: 32px 16px;
+            padding: 36px 20px;
             line-height: 1.5;
         }}
         .container {{
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
         }}
         .header {{
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
+            background: radial-gradient(circle at top left, #1e263d 0%, var(--surface) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 16px;
+            padding: 28px;
             margin-bottom: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            gap: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45);
         }}
-        .header-title h1 {{ font-size: 24px; font-weight: 700; color: #1e293b; }}
-        .header-title p {{ color: var(--text-muted); font-size: 14px; margin-top: 4px; }}
+        .header-title h1 {{ font-size: 26px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }}
+        .header-title p {{ color: var(--text-muted); font-size: 13px; font-family: 'JetBrains Mono', monospace; margin-top: 6px; }}
         .score-hero {{
             display: flex;
             align-items: center;
-            gap: 16px;
-            background: #f1f5f9;
-            padding: 12px 20px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
+            gap: 18px;
+            background: rgba(15, 23, 42, 0.7);
+            padding: 14px 22px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }}
         .score-circle {{
-            font-size: 32px;
-            font-weight: 800;
-            color: {grade_color};
+            font-size: 38px;
+            font-weight: 900;
+            font-family: 'JetBrains Mono', monospace;
+            color: #ffffff;
         }}
         .grade-badge {{
-            font-size: 28px;
+            font-size: 34px;
             font-weight: 900;
-            padding: 4px 14px;
-            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            width: 65px;
+            height: 65px;
+            border-radius: 14px;
             background: {grade_color};
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px {grade_color}88;
         }}
         .grid-kpis {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 14px;
             margin-bottom: 24px;
         }}
         .kpi-card {{
             background: var(--surface);
             border: 1px solid var(--border);
+            border-top: 3px solid var(--primary);
             border-radius: 10px;
             padding: 16px;
-            text-align: center;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
         }}
-        .kpi-val {{ font-size: 22px; font-weight: 700; color: #0f172a; }}
-        .kpi-label {{ font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }}
+        .kpi-val {{ font-size: 22px; font-weight: 800; font-family: 'JetBrains Mono', monospace; color: #ffffff; }}
+        .kpi-label {{ font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 4px; }}
         .section {{
             background: var(--surface);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 24px;
             margin-bottom: 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }}
-        .section-title {{ font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #1e293b; }}
-        .dim-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }}
-        .dim-card {{ background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 14px; }}
-        .dim-header {{ display: flex; justify-content: space-between; font-weight: 600; font-size: 14px; margin-bottom: 8px; }}
-        .progress-bar-bg {{ background: #e2e8f0; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px; }}
+        .section-title {{ font-size: 18px; font-weight: 700; margin-bottom: 18px; color: #ffffff; }}
+        .dim-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }}
+        .dim-card {{ background: var(--surface-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }}
+        .dim-header {{ display: flex; justify-content: space-between; font-weight: 600; font-size: 14px; margin-bottom: 10px; }}
+        .dim-score {{ font-family: 'JetBrains Mono', monospace; font-weight: 700; }}
+        .progress-bar-bg {{ background: #1e293b; height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 8px; }}
         .progress-bar-fill {{ height: 100%; border-radius: 4px; }}
         .dim-desc {{ font-size: 12px; color: var(--text-muted); }}
         table {{ width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }}
-        th {{ background: #f1f5f9; padding: 10px 12px; border-bottom: 2px solid var(--border); color: #475569; font-weight: 600; }}
-        td {{ padding: 10px 12px; border-bottom: 1px solid var(--border); }}
-        tr:hover {{ background-color: #f8fafc; }}
-        .tag-type {{ background: #f1f5f9; color: #334155; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-family: monospace; }}
-        .badge-clean {{ color: #16a34a; font-weight: 600; font-size: 12px; }}
-        .badge-issue {{ color: #dc2626; font-size: 11px; }}
-        .rec-item {{ background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 10px; }}
-        .rec-header {{ display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }}
-        .priority-badge {{ font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; }}
-        .badge-crit {{ background: #fee2e2; color: #b91c1c; }}
-        .badge-high {{ background: #ffedd5; color: #c2410c; }}
-        .badge-med {{ background: #fef9c3; color: #a16207; }}
-        .rec-category {{ font-weight: 600; font-size: 12px; color: #475569; }}
-        .rec-msg {{ font-size: 13px; color: #1e293b; }}
-        pre {{ background: #1e293b; color: #f8fafc; padding: 8px 12px; border-radius: 6px; font-size: 12px; margin-top: 8px; overflow-x: auto; }}
-        .footer {{ text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 32px; }}
+        th {{ background: #131b2e; padding: 12px 14px; border-bottom: 2px solid var(--border); color: #cbd5e1; font-weight: 700; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; }}
+        td {{ padding: 12px 14px; border-bottom: 1px solid var(--border); }}
+        tr:hover {{ background-color: rgba(255, 255, 255, 0.02); }}
+        .tag-type {{ background: #1e293b; color: #38bdf8; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-family: 'JetBrains Mono', monospace; }}
+        .badge-clean {{ color: #10b981; font-weight: 700; font-size: 12px; font-family: 'JetBrains Mono', monospace; }}
+        .badge-issue {{ color: #f43f5e; font-size: 11px; font-family: 'JetBrains Mono', monospace; }}
+        .rec-item {{ background: #101624; border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }}
+        .rec-header {{ display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }}
+        .priority-badge {{ font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }}
+        .badge-crit {{ background: rgba(244, 63, 94, 0.2); color: #f43f5e; border: 1px solid #f43f5e; }}
+        .badge-high {{ background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid #f59e0b; }}
+        .badge-med {{ background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8; }}
+        .rec-category {{ font-weight: 700; font-size: 12px; color: #38bdf8; font-family: 'JetBrains Mono', monospace; }}
+        .rec-msg {{ font-size: 13px; color: #f1f5f9; }}
+        pre {{ background: #070a10; color: #38bdf8; padding: 10px 14px; border-radius: 8px; font-size: 12px; font-family: 'JetBrains Mono', monospace; margin-top: 10px; border: 1px solid #1e2638; overflow-x: auto; }}
+        .footer {{ text-align: center; font-size: 12px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; margin-top: 36px; }}
     </style>
 </head>
 <body>
@@ -331,43 +344,43 @@ def generate_html_report(
         <!-- Header -->
         <div class="header">
             <div class="header-title">
-                <h1>Data Quality & Profiling Report</h1>
-                <p>Generated by <strong>Automated Dataset Quality & Profiling Engine</strong> | Target: <code>{metadata.get('filename', 'dataset.csv')}</code></p>
+                <h1>Cyber Quality Index // Audit Report</h1>
+                <p>ENGINE: AUTOMATED QUALITY & PROFILING CORE • TARGET: <code>{metadata.get('filename', 'dataset.csv')}</code></p>
             </div>
             <div class="score-hero">
                 <div class="grade-badge">{grade}</div>
                 <div>
                     <div class="score-circle">{score:.1f}<span style="font-size: 18px; color: #64748b;"> / 100</span></div>
-                    <div style="font-size: 12px; color: #64748b; font-weight: 500;">{desc}</div>
+                    <div style="font-size: 12px; color: #94a3b8; font-family: 'JetBrains Mono', monospace;">STATUS: {desc.upper()}</div>
                 </div>
             </div>
         </div>
 
         <!-- KPI Grid -->
         <div class="grid-kpis">
-            <div class="kpi-card">
+            <div class="kpi-card" style="border-top-color: #06b6d4;">
                 <div class="kpi-val">{overview.get('total_rows', 0):,}</div>
-                <div class="kpi-label">Total Rows</div>
+                <div class="kpi-label">Total Records</div>
             </div>
-            <div class="kpi-card">
+            <div class="kpi-card" style="border-top-color: #6366f1;">
                 <div class="kpi-val">{overview.get('total_columns', 0):,}</div>
-                <div class="kpi-label">Total Columns</div>
+                <div class="kpi-label">Features</div>
             </div>
-            <div class="kpi-card">
-                <div class="kpi-val">{overview.get('memory_usage_str', '0 KB')}</div>
-                <div class="kpi-label">Memory Size</div>
-            </div>
-            <div class="kpi-card">
+            <div class="kpi-card" style="border-top-color: #f43f5e;">
                 <div class="kpi-val">{overview.get('overall_missing_percentage', 0.0)}%</div>
-                <div class="kpi-label">Missing Cells</div>
+                <div class="kpi-label">Missing Density</div>
             </div>
-            <div class="kpi-card">
+            <div class="kpi-card" style="border-top-color: #f59e0b;">
                 <div class="kpi-val">{overview.get('duplicate_rows_count', 0):,}</div>
                 <div class="kpi-label">Duplicate Rows</div>
             </div>
-            <div class="kpi-card">
+            <div class="kpi-card" style="border-top-color: #a855f7;">
                 <div class="kpi-val">{overview.get('total_outliers_detected', 0):,}</div>
-                <div class="kpi-label">Outliers (IQR)</div>
+                <div class="kpi-label">IQR Outliers</div>
+            </div>
+            <div class="kpi-card" style="border-top-color: #10b981;">
+                <div class="kpi-val">{overview.get('memory_usage_str', '0 KB')}</div>
+                <div class="kpi-label">Memory Footprint</div>
             </div>
         </div>
 
