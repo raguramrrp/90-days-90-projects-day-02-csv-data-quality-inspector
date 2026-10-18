@@ -1,0 +1,401 @@
+property_id,city,property_type,bedrooms,bathrooms,square_feet,listing_price,year_built,has_garage
+PROP-50001,San Francisco,Condo,1,1.2,979,292200.0,1983,False
+PROP-50002,Austin,Townhouse,1,1.2,684,179400.0,2011,True
+PROP-50003,Seattle,Multi-Family,3,3.0,1959,557100.0,1992,True
+PROP-50004,Chicago,Single Family,2,2.5,1565,391000.0,2018,False
+PROP-50005,Boston,Condo,2,1.5,1716,505500.0,2019,False
+PROP-50006,New York,Townhouse,2,2.5,1629,362200.0,1978,True
+PROP-50007,San Francisco,Multi-Family,1,1.2,771,267700.0,1992,False
+PROP-50008,Austin,Single Family,1,0.8,809,233200.0,2014,True
+PROP-50009,Seattle,Condo,2,1.5,1119,283300.0,2008,False
+PROP-50010,Chicago,Townhouse,2,1.5,1631,447200.0,2004,True
+PROP-50011,Boston,Multi-Family,1,1.0,839,287900.0,2011,True
+PROP-50012,New York,Single Family,1,1.0,878,236700.0,2006,True
+PROP-50013,San Francisco,Condo,5,5.0,2478,727100.0,1981,True
+PROP-50014,Austin,Townhouse,3,2.2,1746,521000.0,1984,False
+PROP-50015,Seattle,Multi-Family,4,3.0,2961,670100.0,1994,True
+PROP-50016,Chicago,Single Family,3,3.0,1557,556000.0,2012,False
+PROP-50017,Boston,Condo,5,3.8,3258,1010200.0,2008,True
+PROP-50018,New York,Townhouse,4,4.0,2952,812800.0,2014,True
+PROP-50019,San Francisco,Multi-Family,3,2.2,1894,502100.0,1990,True
+PROP-50020,Austin,Single Family,5,6.2,3455,1202200.0,2006,True
+PROP-50021,Seattle,Condo,3,3.0,1966,611500.0,1981,False
+PROP-50022,Chicago,Townhouse,4,3.0,2768,726700.0,2023,False
+PROP-50023,Boston,Multi-Family,2,1.5,1423,466300.0,2021,False
+PROP-50024,New York,Single Family,3,3.8,2242,608200.0,2021,False
+PROP-50025,San Francisco,Condo,2,2.5,1248,328100.0,1995,True
+PROP-50026,Austin,Townhouse,4,5.0,2374,879000.0,1992,False
+PROP-50027,Seattle,Multi-Family,5,6.2,2901,997200.0,1991,False
+PROP-50028,Chicago,Single Family,2,1.5,1604,546700.0,1985,True
+PROP-50029,Boston,Condo,4,5.0,2578,897800.0,1982,True
+PROP-50030,New York,Townhouse,2,2.5,1592,495300.0,1991,True
+PROP-50031,San Francisco,Multi-Family,2,2.5,1305,443500.0,1978,False
+PROP-50032,Austin,Single Family,4,3.0,2745,657600.0,1984,True
+PROP-50033,Seattle,Condo,5,3.8,2664,896100.0,2002,False
+PROP-50034,Chicago,Townhouse,5,5.0,3551,1233300.0,1980,True
+PROP-50035,Boston,Multi-Family,2,2.0,1525,563000.0,2020,False
+PROP-50036,New York,Single Family,4,3.0,2838,974600.0,1981,False
+PROP-50037,San Francisco,Condo,4,5.0,2968,899900.0,1985,False
+PROP-50038,Austin,Townhouse,1,1.0,973,334200.0,1981,False
+PROP-50039,Seattle,Multi-Family,5,5.0,2524,805600.0,1996,True
+PROP-50040,Chicago,Single Family,5,5.0,3299,976300.0,1987,False
+PROP-50041,Boston,Condo,3,2.2,1832,591100.0,2015,True
+PROP-50042,New York,Townhouse,3,2.2,2376,642100.0,1988,False
+PROP-50043,San Francisco,Multi-Family,1,1.0,680,190700.0,1980,True
+PROP-50044,Austin,Single Family,2,2.5,1061,391200.0,1993,True
+PROP-50045,Seattle,Condo,1,1.0,884,294700.0,2017,False
+PROP-50046,Chicago,Townhouse,5,6.2,2531,666300.0,1992,False
+PROP-50047,Boston,Multi-Family,3,3.0,2165,702800.0,2006,True
+PROP-50048,New York,Single Family,3,3.8,2210,513200.0,2002,True
+PROP-50049,San Francisco,Condo,2,2.0,1225,390700.0,2021,True
+PROP-50050,Austin,Townhouse,1,1.2,684,254900.0,2006,False
+PROP-50051,Seattle,Multi-Family,2,2.5,1188,310000.0,2013,False
+PROP-50052,Chicago,Single Family,2,2.0,1374,322200.0,2010,False
+PROP-50053,Boston,Condo,3,2.2,2013,622800.0,1984,True
+PROP-50054,New York,Townhouse,5,3.8,3753,950400.0,1987,True
+PROP-50055,San Francisco,Multi-Family,2,2.5,1335,488700.0,2003,True
+PROP-50056,Austin,Single Family,2,2.0,1573,571900.0,1997,True
+PROP-50057,Seattle,Condo,4,4.0,2781,897100.0,1986,True
+PROP-50058,Chicago,Townhouse,4,4.0,2293,722400.0,1981,False
+PROP-50059,Boston,Multi-Family,4,3.0,2701,748000.0,2020,False
+PROP-50060,New York,Single Family,2,1.5,1557,545600.0,2019,False
+PROP-50061,San Francisco,Condo,4,3.0,2454,908700.0,2007,True
+PROP-50062,Austin,Townhouse,2,1.5,1203,318200.0,1997,True
+PROP-50063,Seattle,Multi-Family,1,1.0,861,214700.0,2005,False
+PROP-50064,Chicago,Single Family,3,3.8,1944,446900.0,2022,True
+PROP-50065,Boston,Condo,3,2.2,1816,644600.0,1990,False
+PROP-50066,New York,Townhouse,4,5.0,2019,753700.0,2000,False
+PROP-50067,San Francisco,Multi-Family,1,1.2,770,193300.0,1975,True
+PROP-50068,Austin,Single Family,1,1.2,792,181700.0,2015,True
+PROP-50069,Seattle,Condo,2,1.5,1115,346400.0,1989,True
+PROP-50070,Chicago,Townhouse,2,1.5,1390,456800.0,1975,True
+PROP-50071,Boston,Multi-Family,5,5.0,3277,817000.0,2013,True
+PROP-50072,New York,Single Family,4,3.0,2887,861400.0,2009,True
+PROP-50073,San Francisco,Condo,1,1.0,869,250000.0,1991,True
+PROP-50074,Austin,Townhouse,1,0.8,702,186800.0,1983,False
+PROP-50075,Seattle,Multi-Family,2,1.5,1469,401000.0,1985,False
+PROP-50076,Chicago,Single Family,4,3.0,3062,810700.0,1988,False
+PROP-50077,Boston,Condo,2,1.5,1111,276900.0,1999,False
+PROP-50078,New York,Townhouse,4,5.0,2939,997200.0,2000,False
+PROP-50079,San Francisco,Multi-Family,1,0.8,735,186200.0,1978,True
+PROP-50080,Austin,Single Family,1,1.0,607,195700.0,1986,False
+PROP-50081,Seattle,Condo,5,5.0,3226,1118300.0,2005,False
+PROP-50082,Chicago,Townhouse,4,5.0,2261,730000.0,2023,False
+PROP-50083,Boston,Multi-Family,2,1.5,1156,342000.0,1984,False
+PROP-50084,New York,Single Family,5,5.0,2578,945500.0,2018,False
+PROP-50085,San Francisco,Condo,1,1.0,771,290800.0,2009,True
+PROP-50086,Austin,Townhouse,1,0.8,959,217000.0,2016,False
+PROP-50087,Seattle,Multi-Family,2,2.5,1183,279000.0,2012,False
+PROP-50088,Chicago,Single Family,3,3.0,2245,765500.0,1978,False
+PROP-50089,Boston,Condo,4,4.0,2491,725600.0,1986,False
+PROP-50090,New York,Townhouse,1,1.0,955,260400.0,1982,True
+PROP-50091,San Francisco,Multi-Family,3,3.8,1983,630500.0,1999,False
+PROP-50092,Austin,Single Family,4,3.0,2308,810100.0,1999,True
+PROP-50093,Seattle,Condo,3,3.8,2250,802700.0,1996,True
+PROP-50094,Chicago,Townhouse,2,1.5,1595,579100.0,1987,True
+PROP-50095,Boston,Multi-Family,2,1.5,1513,429800.0,2007,True
+PROP-50096,New York,Single Family,1,1.2,940,223400.0,1976,False
+PROP-50097,San Francisco,Condo,2,2.5,1613,414400.0,1985,True
+PROP-50098,Austin,Townhouse,5,6.2,3340,1228300.0,1996,True
+PROP-50099,Seattle,Multi-Family,4,4.0,2341,523300.0,1978,False
+PROP-50100,Chicago,Single Family,3,3.8,1815,486000.0,1977,False
+PROP-50101,Boston,Condo,2,1.5,1590,454400.0,1981,False
+PROP-50102,New York,Townhouse,1,1.0,836,243100.0,1995,False
+PROP-50103,San Francisco,Multi-Family,2,2.5,1609,393600.0,2005,True
+PROP-50104,Austin,Single Family,3,3.0,1748,410700.0,1981,True
+PROP-50105,Seattle,Condo,3,3.0,2346,522900.0,2008,True
+PROP-50106,Chicago,Townhouse,2,1.5,1210,438300.0,1994,False
+PROP-50107,Boston,Multi-Family,2,1.5,1551,440600.0,2004,True
+PROP-50108,New York,Single Family,5,5.0,3593,913100.0,1983,True
+PROP-50109,San Francisco,Condo,4,3.0,2523,758100.0,2021,True
+PROP-50110,Austin,Townhouse,2,2.5,1219,361500.0,2002,True
+PROP-50111,Seattle,Multi-Family,4,4.0,2327,875700.0,1984,True
+PROP-50112,Chicago,Single Family,5,3.8,3898,1214200.0,1981,True
+PROP-50113,Boston,Condo,4,3.0,2580,827800.0,1983,False
+PROP-50114,New York,Townhouse,3,3.8,2343,716700.0,2007,True
+PROP-50115,San Francisco,Multi-Family,1,1.0,953,303500.0,2012,False
+PROP-50116,Austin,Single Family,2,2.0,1355,402100.0,1988,True
+PROP-50117,Seattle,Condo,4,4.0,2106,498800.0,1999,False
+PROP-50118,Chicago,Townhouse,5,6.2,3470,943900.0,1984,True
+PROP-50119,Boston,Multi-Family,3,2.2,2077,559600.0,2010,False
+PROP-50120,New York,Single Family,1,0.8,785,214400.0,1995,True
+PROP-50121,San Francisco,Condo,4,3.0,2316,847600.0,2007,True
+PROP-50122,Austin,Townhouse,2,1.5,1541,408800.0,2009,False
+PROP-50123,Seattle,Multi-Family,4,5.0,2220,598800.0,2000,False
+PROP-50124,Chicago,Single Family,1,0.8,744,269800.0,1999,False
+PROP-50125,Boston,Condo,2,2.5,1457,415600.0,1989,True
+PROP-50126,New York,Townhouse,2,2.5,1380,510800.0,2008,True
+PROP-50127,San Francisco,Multi-Family,3,3.0,1705,617400.0,1995,True
+PROP-50128,Austin,Single Family,1,1.0,833,292700.0,1981,True
+PROP-50129,Seattle,Condo,1,1.2,939,356200.0,1990,True
+PROP-50130,Chicago,Townhouse,5,6.2,3858,896600.0,2013,False
+PROP-50131,Boston,Multi-Family,2,1.5,1386,479000.0,1985,False
+PROP-50132,New York,Single Family,3,2.2,2067,546500.0,1987,False
+PROP-50133,San Francisco,Condo,1,1.0,827,294900.0,2008,True
+PROP-50134,Austin,Townhouse,2,1.5,1331,345600.0,2000,False
+PROP-50135,Seattle,Multi-Family,5,3.8,2569,608900.0,1986,False
+PROP-50136,Chicago,Single Family,1,1.0,694,199700.0,1993,False
+PROP-50137,Boston,Condo,1,1.2,880,306200.0,1995,True
+PROP-50138,New York,Townhouse,1,0.8,699,204200.0,1992,True
+PROP-50139,San Francisco,Multi-Family,5,5.0,3147,704900.0,2019,True
+PROP-50140,Austin,Single Family,3,3.8,1776,633400.0,2005,False
+PROP-50141,Seattle,Condo,1,0.8,827,205100.0,2007,False
+PROP-50142,Chicago,Townhouse,4,5.0,2192,552500.0,2000,True
+PROP-50143,Boston,Multi-Family,2,1.5,1584,567000.0,2015,False
+PROP-50144,New York,Single Family,1,1.0,849,243900.0,1985,True
+PROP-50145,San Francisco,Condo,1,1.2,903,279000.0,2010,True
+PROP-50146,Austin,Townhouse,2,1.5,1447,543900.0,2023,False
+PROP-50147,Seattle,Multi-Family,1,0.8,612,206400.0,2002,True
+PROP-50148,Chicago,Single Family,2,2.5,1619,474600.0,2012,True
+PROP-50149,Boston,Condo,5,3.8,2660,808500.0,1990,True
+PROP-50150,New York,Townhouse,3,3.0,2248,740000.0,1986,False
+PROP-50151,San Francisco,Multi-Family,5,5.0,3210,758300.0,1979,False
+PROP-50152,Austin,Single Family,2,1.5,1518,433400.0,2005,False
+PROP-50153,Seattle,Condo,4,3.0,2982,954500.0,1993,False
+PROP-50154,Chicago,Townhouse,2,2.0,1270,454400.0,2012,True
+PROP-50155,Boston,Multi-Family,1,1.2,650,192500.0,1987,True
+PROP-50156,New York,Single Family,2,1.5,1419,459500.0,1989,True
+PROP-50157,San Francisco,Condo,3,3.0,2364,591100.0,1985,False
+PROP-50158,Austin,Townhouse,4,4.0,2716,839600.0,2018,False
+PROP-50159,Seattle,Multi-Family,3,3.0,1640,443700.0,2021,True
+PROP-50160,Chicago,Single Family,2,2.5,1316,489600.0,2010,False
+PROP-50161,Boston,Condo,5,5.0,2804,845600.0,1997,False
+PROP-50162,New York,Townhouse,3,3.8,1859,609500.0,1996,True
+PROP-50163,San Francisco,Multi-Family,1,1.2,764,230800.0,2016,False
+PROP-50164,Austin,Single Family,1,1.2,778,278100.0,2007,False
+PROP-50165,Seattle,Condo,4,3.0,3156,763800.0,2014,True
+PROP-50166,Chicago,Townhouse,4,4.0,2253,819300.0,2011,True
+PROP-50167,Boston,Multi-Family,5,5.0,3027,745700.0,2015,False
+PROP-50168,New York,Single Family,4,3.0,2641,670700.0,1992,False
+PROP-50169,San Francisco,Condo,3,2.2,1608,541000.0,2001,True
+PROP-50170,Austin,Townhouse,5,6.2,3920,1061900.0,1986,False
+PROP-50171,Seattle,Multi-Family,3,3.0,1900,534100.0,1992,True
+PROP-50172,Chicago,Single Family,5,3.8,2615,585000.0,2009,True
+PROP-50173,Boston,Condo,2,2.0,1358,494700.0,2021,True
+PROP-50174,New York,Townhouse,3,3.8,2388,651000.0,2001,True
+PROP-50175,San Francisco,Multi-Family,2,1.5,1708,400700.0,1994,True
+PROP-50176,Austin,Single Family,5,6.2,3448,810100.0,2013,False
+PROP-50177,Seattle,Condo,2,2.0,1646,511900.0,1986,False
+PROP-50178,Chicago,Townhouse,2,2.0,1462,339600.0,2018,True
+PROP-50179,Boston,Multi-Family,2,1.5,1260,455400.0,1997,False
+PROP-50180,New York,Single Family,3,2.2,2103,591900.0,1978,True
+PROP-50181,San Francisco,Condo,3,3.8,2277,753600.0,2002,False
+PROP-50182,Austin,Townhouse,4,3.0,2867,883900.0,1980,True
+PROP-50183,Seattle,Multi-Family,3,3.8,1950,608800.0,1999,False
+PROP-50184,Chicago,Single Family,5,5.0,3663,891000.0,2019,False
+PROP-50185,Boston,Condo,4,3.0,2347,643900.0,2012,False
+PROP-50186,New York,Townhouse,1,0.8,704,259500.0,1989,True
+PROP-50187,San Francisco,Multi-Family,5,5.0,3111,1091100.0,1975,False
+PROP-50188,Austin,Single Family,4,3.0,2224,841600.0,1995,True
+PROP-50189,Seattle,Condo,2,1.5,1715,634300.0,2022,False
+PROP-50190,Chicago,Townhouse,2,2.0,1207,349500.0,2001,False
+PROP-50191,Boston,Multi-Family,1,0.8,750,205200.0,1991,True
+PROP-50192,New York,Single Family,4,3.0,2714,790300.0,2016,False
+PROP-50193,San Francisco,Condo,2,2.5,1316,440300.0,2003,False
+PROP-50194,Austin,Townhouse,4,5.0,3019,684200.0,1981,False
+PROP-50195,Seattle,Multi-Family,5,3.8,3894,1370500.0,2017,True
+PROP-50196,Chicago,Single Family,5,6.2,2601,899200.0,2012,True
+PROP-50197,Boston,Condo,2,1.5,1245,437500.0,1996,True
+PROP-50198,New York,Townhouse,2,2.5,1186,265000.0,2001,True
+PROP-50199,San Francisco,Multi-Family,4,5.0,2796,1001200.0,1995,False
+PROP-50200,Austin,Single Family,2,2.5,1465,380200.0,1978,True
+PROP-50201,Seattle,Condo,2,2.5,1369,337800.0,1985,False
+PROP-50202,Chicago,Townhouse,5,5.0,3392,817800.0,2016,True
+PROP-50203,Boston,Multi-Family,2,2.5,1277,366600.0,1981,True
+PROP-50204,New York,Single Family,1,1.0,983,304000.0,2001,False
+PROP-50205,San Francisco,Condo,5,3.8,2495,566100.0,1993,False
+PROP-50206,Austin,Townhouse,1,0.8,689,224300.0,1986,True
+PROP-50207,Seattle,Multi-Family,3,2.2,1711,506300.0,1986,False
+PROP-50208,Chicago,Single Family,1,0.8,672,164300.0,2000,False
+PROP-50209,Boston,Condo,5,3.8,2545,924300.0,1984,False
+PROP-50210,New York,Townhouse,3,3.0,1679,431400.0,1991,False
+PROP-50211,San Francisco,Multi-Family,5,5.0,2642,671500.0,1991,False
+PROP-50212,Austin,Single Family,2,2.0,1131,382000.0,1985,False
+PROP-50213,Seattle,Condo,1,0.8,940,251500.0,2011,True
+PROP-50214,Chicago,Townhouse,2,1.5,1587,354300.0,1991,False
+PROP-50215,Boston,Multi-Family,5,6.2,2802,858900.0,1997,True
+PROP-50216,New York,Single Family,4,5.0,3003,854200.0,1992,True
+PROP-50217,San Francisco,Condo,5,3.8,3959,946800.0,1998,False
+PROP-50218,Austin,Townhouse,4,5.0,2111,478100.0,1984,True
+PROP-50219,Seattle,Multi-Family,4,4.0,2924,925500.0,1978,False
+PROP-50220,Chicago,Single Family,2,2.0,1351,357300.0,1975,False
+PROP-50221,Boston,Condo,2,2.0,1248,326500.0,1998,False
+PROP-50222,New York,Townhouse,5,6.2,3014,677800.0,2018,True
+PROP-50223,San Francisco,Multi-Family,4,5.0,2360,627500.0,2022,True
+PROP-50224,Austin,Single Family,2,2.5,1136,251800.0,2023,True
+PROP-50225,Seattle,Condo,3,2.2,1750,497200.0,2011,True
+PROP-50226,Chicago,Townhouse,5,5.0,3462,1307200.0,1978,True
+PROP-50227,Boston,Multi-Family,4,4.0,2455,841900.0,1996,True
+PROP-50228,New York,Single Family,1,0.8,869,208300.0,2011,False
+PROP-50229,San Francisco,Condo,1,1.2,944,332600.0,1981,True
+PROP-50230,Austin,Townhouse,4,3.0,1993,694300.0,2020,False
+PROP-50231,Seattle,Multi-Family,4,5.0,2933,789700.0,1992,False
+PROP-50232,Chicago,Single Family,5,3.8,3466,815400.0,1999,True
+PROP-50233,Boston,Condo,1,1.0,681,228200.0,1977,False
+PROP-50234,New York,Townhouse,5,6.2,2479,925200.0,1977,False
+PROP-50235,San Francisco,Multi-Family,3,3.0,1685,580300.0,1994,True
+PROP-50236,Austin,Single Family,5,5.0,3299,999900.0,2008,True
+PROP-50237,Seattle,Condo,1,0.8,683,201000.0,1975,True
+PROP-50238,Chicago,Townhouse,1,0.8,753,168600.0,2015,False
+PROP-50239,Boston,Multi-Family,3,2.2,1885,584000.0,2007,False
+PROP-50240,New York,Single Family,3,2.2,1819,564900.0,2009,False
+PROP-50241,San Francisco,Condo,5,3.8,2995,1024100.0,1993,True
+PROP-50242,Austin,Townhouse,3,3.0,2407,825600.0,2023,False
+PROP-50243,Seattle,Multi-Family,2,1.5,1368,518300.0,1996,False
+PROP-50244,Chicago,Single Family,1,0.8,967,340500.0,2019,True
+PROP-50245,Boston,Condo,2,2.5,1346,320300.0,1996,True
+PROP-50246,New York,Townhouse,2,2.0,1475,498000.0,2006,True
+PROP-50247,San Francisco,Multi-Family,2,1.5,1440,436800.0,1990,False
+PROP-50248,Austin,Single Family,3,3.8,1940,446300.0,2021,True
+PROP-50249,Seattle,Condo,1,0.8,672,234000.0,2017,False
+PROP-50250,Chicago,Townhouse,1,0.8,630,179200.0,1975,False
+PROP-50251,Boston,Multi-Family,1,1.2,680,224800.0,1998,False
+PROP-50252,New York,Single Family,3,3.0,2408,576900.0,1995,True
+PROP-50253,San Francisco,Condo,5,5.0,3752,1314400.0,2003,False
+PROP-50254,Austin,Townhouse,3,3.0,2185,495000.0,2020,True
+PROP-50255,Seattle,Multi-Family,1,1.0,795,268000.0,1981,False
+PROP-50256,Chicago,Single Family,5,5.0,3389,1249100.0,1983,False
+PROP-50257,Boston,Condo,3,3.0,1790,613500.0,2015,False
+PROP-50258,New York,Townhouse,2,2.5,1716,403400.0,1996,False
+PROP-50259,San Francisco,Multi-Family,2,2.0,1364,404200.0,2019,False
+PROP-50260,Austin,Single Family,2,2.0,1446,527800.0,1976,False
+PROP-50261,Seattle,Condo,1,1.0,935,338600.0,1982,True
+PROP-50262,Chicago,Townhouse,4,5.0,2315,616200.0,1991,True
+PROP-50263,Boston,Multi-Family,1,0.8,929,254200.0,2003,False
+PROP-50264,New York,Single Family,4,4.0,2489,616900.0,1988,False
+PROP-50265,San Francisco,Condo,5,6.2,2855,638900.0,2002,True
+PROP-50266,Austin,Townhouse,3,2.2,1700,515700.0,1999,True
+PROP-50267,Seattle,Multi-Family,3,3.0,2239,617900.0,2004,True
+PROP-50268,Chicago,Single Family,1,1.2,843,270500.0,1982,True
+PROP-50269,Boston,Condo,2,2.0,1519,379200.0,1993,False
+PROP-50270,New York,Townhouse,1,0.8,641,159100.0,2021,True
+PROP-50271,San Francisco,Multi-Family,1,1.0,735,165700.0,1979,True
+PROP-50272,Austin,Single Family,3,3.8,2322,685600.0,1988,False
+PROP-50273,Seattle,Condo,4,5.0,2917,772400.0,1982,True
+PROP-50274,Chicago,Townhouse,4,4.0,2254,506900.0,2003,True
+PROP-50275,Boston,Multi-Family,1,1.0,734,162200.0,1989,False
+PROP-50276,New York,Single Family,1,0.8,935,265700.0,2000,False
+PROP-50277,San Francisco,Condo,1,1.0,881,270400.0,2015,False
+PROP-50278,Austin,Townhouse,5,5.0,2818,846000.0,2004,True
+PROP-50279,Seattle,Multi-Family,2,2.5,1316,334900.0,2020,True
+PROP-50280,Chicago,Single Family,5,6.2,3302,894100.0,1995,True
+PROP-50281,Boston,Condo,2,2.0,1502,455300.0,1992,False
+PROP-50282,New York,Townhouse,4,4.0,2594,707100.0,1987,False
+PROP-50283,San Francisco,Multi-Family,1,0.8,713,246900.0,2023,True
+PROP-50284,Austin,Single Family,3,2.2,1785,495200.0,1984,False
+PROP-50285,Seattle,Condo,3,2.2,1515,334600.0,1978,False
+PROP-50286,Chicago,Townhouse,1,1.0,850,193800.0,2015,False
+PROP-50287,Boston,Multi-Family,2,1.5,1640,592200.0,2007,False
+PROP-50288,New York,Single Family,2,2.0,1729,443700.0,1991,False
+PROP-50289,San Francisco,Condo,4,5.0,2193,776000.0,2018,False
+PROP-50290,Austin,Townhouse,5,3.8,3411,1049800.0,1995,False
+PROP-50291,Seattle,Multi-Family,2,2.0,1129,262500.0,1996,True
+PROP-50292,Chicago,Single Family,5,5.0,2769,946500.0,1992,True
+PROP-50293,Boston,Condo,3,2.2,2020,667600.0,2015,False
+PROP-50294,New York,Townhouse,3,3.8,2355,746300.0,1975,False
+PROP-50295,San Francisco,Multi-Family,5,3.8,2939,728100.0,1987,False
+PROP-50296,Austin,Single Family,2,1.5,1153,269500.0,1981,False
+PROP-50297,Seattle,Condo,1,1.2,757,268300.0,1987,True
+PROP-50298,Chicago,Townhouse,1,0.8,760,267200.0,2006,False
+PROP-50299,Boston,Multi-Family,4,4.0,2276,665300.0,2015,False
+PROP-50300,New York,Single Family,2,1.5,1736,557200.0,1984,True
+PROP-50301,San Francisco,Condo,4,3.0,2975,685100.0,1993,True
+PROP-50302,Austin,Townhouse,3,2.2,2107,653400.0,2012,False
+PROP-50303,Seattle,Multi-Family,4,3.0,2131,548200.0,1995,True
+PROP-50304,Chicago,Single Family,1,0.8,934,238300.0,2011,False
+PROP-50305,Boston,Condo,5,6.2,3694,1119200.0,2001,True
+PROP-50306,New York,Townhouse,1,1.0,945,284400.0,1975,False
+PROP-50307,San Francisco,Multi-Family,3,3.0,2269,712400.0,1983,False
+PROP-50308,Austin,Single Family,3,3.8,1549,442800.0,1978,True
+PROP-50309,Seattle,Condo,1,1.2,768,266000.0,1991,False
+PROP-50310,Chicago,Townhouse,2,1.5,1031,299000.0,1993,True
+PROP-50311,Boston,Multi-Family,5,5.0,2775,683500.0,1988,False
+PROP-50312,New York,Single Family,3,2.2,1575,564000.0,2003,False
+PROP-50313,San Francisco,Condo,1,1.2,776,236800.0,2004,False
+PROP-50314,Austin,Townhouse,5,5.0,2972,828800.0,2018,False
+PROP-50315,Seattle,Multi-Family,1,1.0,845,318000.0,2010,True
+PROP-50316,Chicago,Single Family,5,5.0,2569,766500.0,2016,True
+PROP-50317,Boston,Condo,3,3.8,1552,399400.0,1976,True
+PROP-50318,New York,Townhouse,4,5.0,2019,642100.0,2014,True
+PROP-50319,San Francisco,Multi-Family,5,5.0,3564,1012900.0,2016,False
+PROP-50320,Austin,Single Family,5,3.8,2860,919000.0,2014,False
+PROP-50321,Seattle,Condo,1,1.2,647,236600.0,2019,False
+PROP-50322,Chicago,Townhouse,2,2.0,1549,381500.0,2016,True
+PROP-50323,Boston,Multi-Family,3,2.2,2231,837600.0,1988,False
+PROP-50324,New York,Single Family,4,4.0,2586,741200.0,1995,False
+PROP-50325,San Francisco,Condo,1,0.8,731,182900.0,1998,False
+PROP-50326,Austin,Townhouse,2,2.0,1346,344100.0,2019,True
+PROP-50327,Seattle,Multi-Family,3,3.8,2122,661800.0,2007,False
+PROP-50328,Chicago,Single Family,1,0.8,950,294700.0,2010,True
+PROP-50329,Boston,Condo,5,3.8,3600,991100.0,2020,False
+PROP-50330,New York,Townhouse,2,2.0,1422,393600.0,1986,False
+PROP-50331,San Francisco,Multi-Family,5,5.0,2492,707200.0,1975,False
+PROP-50332,Austin,Single Family,4,4.0,3048,957500.0,2022,False
+PROP-50333,Seattle,Condo,3,3.8,1630,422300.0,1985,True
+PROP-50334,Chicago,Townhouse,5,6.2,3509,984900.0,1990,True
+PROP-50335,Boston,Multi-Family,1,0.8,784,273100.0,2016,False
+PROP-50336,New York,Single Family,4,3.0,2907,642100.0,1991,True
+PROP-50337,San Francisco,Condo,3,3.8,2300,573600.0,2015,False
+PROP-50338,Austin,Townhouse,5,5.0,2633,673600.0,1984,False
+PROP-50339,Seattle,Multi-Family,1,0.8,956,319300.0,1979,True
+PROP-50340,Chicago,Single Family,2,1.5,1272,405900.0,2015,False
+PROP-50341,Boston,Condo,3,3.0,2316,757900.0,2015,False
+PROP-50342,New York,Townhouse,3,3.8,2164,510300.0,1993,True
+PROP-50343,San Francisco,Multi-Family,3,3.8,1617,415600.0,2019,True
+PROP-50344,Austin,Single Family,3,3.0,1989,600700.0,2007,True
+PROP-50345,Seattle,Condo,1,1.0,687,234100.0,1980,False
+PROP-50346,Chicago,Townhouse,2,1.5,1126,393400.0,2019,True
+PROP-50347,Boston,Multi-Family,3,3.8,1957,463400.0,1997,False
+PROP-50348,New York,Single Family,3,3.8,1805,656800.0,2005,True
+PROP-50349,San Francisco,Condo,3,3.0,1957,571100.0,1978,True
+PROP-50350,Austin,Townhouse,2,2.5,1677,417300.0,1995,False
+PROP-50351,Seattle,Multi-Family,5,5.0,3730,859800.0,1991,False
+PROP-50352,Chicago,Single Family,1,1.2,838,191700.0,1977,True
+PROP-50353,Boston,Condo,2,2.5,1595,481600.0,1985,True
+PROP-50354,New York,Townhouse,4,5.0,2628,766500.0,1991,True
+PROP-50355,San Francisco,Multi-Family,5,5.0,2772,781500.0,1980,False
+PROP-50356,Austin,Single Family,4,5.0,2810,966100.0,2009,False
+PROP-50357,Seattle,Condo,1,1.2,733,209700.0,1982,True
+PROP-50358,Chicago,Townhouse,2,1.5,1153,400700.0,1988,False
+PROP-50359,Boston,Multi-Family,5,3.8,3632,1284800.0,1999,False
+PROP-50360,New York,Single Family,1,1.0,633,208900.0,1991,False
+PROP-50361,San Francisco,Condo,1,1.2,888,320100.0,2007,True
+PROP-50362,Austin,Townhouse,2,2.5,1487,452100.0,2007,True
+PROP-50363,Seattle,Multi-Family,5,3.8,3202,955200.0,2013,True
+PROP-50364,Chicago,Single Family,2,2.5,1187,265800.0,1981,False
+PROP-50365,Boston,Condo,2,1.5,1087,367400.0,2015,False
+PROP-50366,New York,Townhouse,5,3.8,2464,742500.0,1982,True
+PROP-50367,San Francisco,Multi-Family,5,5.0,2535,657300.0,1977,False
+PROP-50368,Austin,Single Family,2,1.5,1352,340300.0,1978,True
+PROP-50369,Seattle,Condo,4,3.0,2037,613200.0,1985,False
+PROP-50370,Chicago,Townhouse,1,1.0,863,265300.0,2022,False
+PROP-50371,Boston,Multi-Family,1,0.8,942,340100.0,1978,False
+PROP-50372,New York,Single Family,5,5.0,3284,764600.0,2011,True
+PROP-50373,San Francisco,Condo,3,3.0,1750,652100.0,1980,True
+PROP-50374,Austin,Townhouse,2,2.0,1665,367400.0,2003,True
+PROP-50375,Seattle,Multi-Family,1,1.0,639,231500.0,1984,False
+PROP-50376,Chicago,Single Family,4,4.0,3192,1110500.0,1978,True
+PROP-50377,Boston,Condo,3,3.8,2169,599500.0,1982,False
+PROP-50378,New York,Townhouse,4,5.0,2825,661600.0,1994,False
+PROP-50379,San Francisco,Multi-Family,3,3.8,1497,337400.0,1992,True
+PROP-50380,Austin,Single Family,4,3.0,2929,778600.0,1997,True
+PROP-50381,Seattle,Condo,4,3.0,2559,894600.0,1991,False
+PROP-50382,Chicago,Townhouse,1,1.0,563,195900.0,1988,False
+PROP-50383,Boston,Multi-Family,1,1.2,703,229400.0,2006,False
+PROP-50384,New York,Single Family,1,1.0,884,313500.0,2006,True
+PROP-50385,San Francisco,Condo,1,0.8,568,203900.0,1996,True
+PROP-50386,Austin,Townhouse,2,2.5,1551,547200.0,2004,False
+PROP-50387,Seattle,Multi-Family,5,5.0,3118,734600.0,1988,False
+PROP-50388,Chicago,Single Family,2,2.5,1545,429700.0,1987,False
+PROP-50389,Boston,Condo,3,3.0,2091,723000.0,1982,False
+PROP-50390,New York,Townhouse,4,4.0,2757,917000.0,2017,True
+PROP-50391,San Francisco,Multi-Family,2,2.0,1735,383000.0,1986,False
+PROP-50392,Austin,Single Family,2,2.0,1313,385000.0,1996,True
+PROP-50393,Seattle,Condo,4,3.0,2657,891200.0,1979,True
+PROP-50394,Chicago,Townhouse,2,2.5,1423,535600.0,2008,False
+PROP-50395,Boston,Multi-Family,4,4.0,1941,526400.0,2021,True
+PROP-50396,New York,Single Family,5,5.0,2944,1024900.0,1990,False
+PROP-50397,San Francisco,Condo,5,3.8,3953,1493700.0,1995,False
+PROP-50398,Austin,Townhouse,4,4.0,2807,1061000.0,1988,True
+PROP-50399,Seattle,Multi-Family,5,5.0,3751,1325100.0,1981,False
+PROP-50400,Chicago,Single Family,3,2.2,1971,595100.0,2001,False

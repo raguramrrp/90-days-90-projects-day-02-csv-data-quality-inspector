@@ -1,0 +1,26 @@
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Streamlit Local Cache
+.streamlit/
+
+# Generated Reports & Output Artifacts
+reports/
+*.log
+
+# Environment Variables & Secrets
+.env
+.env.local
+
+# OS Artifacts
+.DS_Store
+Thumbs.db

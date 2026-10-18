@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automated-dataset-quality-engine"
+version = "1.0.0"
+description = "Automated Dataset Quality & Profiling Engine - Day 2 of 90 Days 90 Projects Challenge"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Raguram", email = "raguramrrp@gmail.com" }
+]
+keywords = [
+    "data-quality",
+    "eda",
+    "data-profiling",
+    "pandas",
+    "streamlit",
+    "data-engineering",
+    "data-cleaning",
+    "data-governance",
+    "analytics"
+]
+dependencies = [
+    "streamlit>=1.35.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "plotly>=5.20.0",
+    "jinja2>=3.1.3",
+    "python-dateutil>=2.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
