@@ -1,7 +1,7 @@
 """
 Screenshot Capture Script
 Generates real, high-resolution visual demonstration screenshots
-for the Automated Dataset Quality & Profiling Engine using Headless Chrome.
+for the Automated Dataset Quality & Profiling Engine using Headless Chrome & CDP.
 """
 
 import os
@@ -9,6 +9,11 @@ import sys
 import subprocess
 import time
 import shutil
+import json
+import base64
+import asyncio
+import requests
+import websockets
 import pandas as pd
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,13 +27,12 @@ from src.quality_engine import calculate_quality_score
 from src.report_generator import generate_html_report
 
 CHROME_PATH = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCREENSHOTS_DIR = os.path.join(BASE_DIR, "screenshots")
 DATA_DIR = os.path.join(BASE_DIR, "data")
 TEMP_DIR = os.path.join(os.environ.get("LOCALAPPDATA", "C:\\Temp"), "Temp")
 
 
-def take_screenshot(url: str, output_filename: str, width: int = 1366, height: int = 860, delay: int = 2):
+def take_static_screenshot(url: str, output_filename: str, width: int = 1400, height: int = 900):
     temp_target = os.path.join(TEMP_DIR, output_filename)
     if os.path.exists(temp_target):
         os.remove(temp_target)
@@ -42,22 +46,61 @@ def take_screenshot(url: str, output_filename: str, width: int = 1366, height: i
         f"--screenshot={temp_target}",
         url,
     ]
-    subprocess.run(cmd, capture_output=True, text=True)
-    time.sleep(delay)
+    subprocess.run(cmd, capture_output=True, text=True, timeout=20)
+    time.sleep(1)
 
     final_target = os.path.join(SCREENSHOTS_DIR, output_filename)
     if os.path.exists(temp_target):
         shutil.copy2(temp_target, final_target)
         os.remove(temp_target)
-        print(f"Captured screenshot: {final_target} ({os.path.getsize(final_target):,} bytes)")
+        print(f"Captured static screenshot: {final_target} ({os.path.getsize(final_target):,} bytes)")
         return True
-    else:
-        print(f"Failed to capture {output_filename}")
-        return False
+    return False
+
+
+async def capture_cdp_screenshot(url: str, output_path: str, width: int = 1440, height: int = 900, wait_seconds: int = 6):
+    chrome_proc = subprocess.Popen(
+        [
+            CHROME_PATH,
+            "--headless=new",
+            "--no-sandbox",
+            "--disable-gpu",
+            "--remote-debugging-port=9222",
+            f"--window-size={width},{height}",
+            url,
+        ],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    time.sleep(2)
+
+    try:
+        targets = requests.get("http://localhost:9222/json").json()
+        target = next((t for t in targets if t.get("type") == "page"), targets[0])
+        ws_url = target["webSocketDebuggerUrl"]
+
+        async with websockets.connect(ws_url) as ws:
+            # Let Streamlit WebSocket and charts mount completely
+            await asyncio.sleep(wait_seconds)
+
+            # Capture screenshot via CDP
+            msg = {"id": 1, "method": "Page.captureScreenshot", "params": {"format": "png"}}
+            await ws.send(json.dumps(msg))
+            resp = await ws.recv()
+            data = json.loads(resp)
+            img_b64 = data["result"]["data"]
+            with open(output_path, "wb") as f:
+                f.write(base64.b64decode(img_b64))
+            print(f"Captured CDP screenshot: {output_path} ({os.path.getsize(output_path):,} bytes)")
+            return True
+    finally:
+        chrome_proc.terminate()
+        chrome_proc.wait()
 
 
 def main():
     os.makedirs(SCREENSHOTS_DIR, exist_ok=True)
+    os.makedirs(TEMP_DIR, exist_ok=True)
 
     # 1. Generate HTML audit report for Dirty E-commerce
     ecom_path = os.path.join(DATA_DIR, "sample_ecommerce_dirty.csv")
@@ -75,21 +118,27 @@ def main():
         f.write(html_report)
 
     # Screenshot HTML report
-    take_screenshot(f"file:///{temp_html_path.replace(os.sep, '/')}", "01_html_quality_report.png", width=1400, height=900)
+    take_static_screenshot(f"file:///{temp_html_path.replace(os.sep, '/')}", "01_html_quality_report.png")
 
-    # 2. Launch Streamlit and capture live dashboard views
+    # 2. Launch Streamlit and capture live dashboard views via CDP
     python_exe = os.path.join(BASE_DIR, ".venv", "Scripts", "python.exe")
+    port = 8506
     streamlit_proc = subprocess.Popen(
-        [python_exe, "-m", "streamlit", "run", "src/app.py", "--server.port=8503", "--server.headless=true"],
+        [python_exe, "-m", "streamlit", "run", "src/app.py", f"--server.port={port}", "--server.headless=true"],
         cwd=BASE_DIR,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
     )
-    print("Launched Streamlit on port 8503 for screenshot capture...")
-    time.sleep(4)
+    print(f"Launched Streamlit on port {port} for screenshot capture...")
+    time.sleep(6)
 
     try:
-        take_screenshot("http://localhost:8503", "02_streamlit_overview.png", width=1400, height=900, delay=3)
+        overview_path = os.path.join(SCREENSHOTS_DIR, "02_streamlit_overview.png")
+        asyncio.run(capture_cdp_screenshot(f"http://localhost:{port}", overview_path, width=1440, height=920, wait_seconds=6))
+
+        # Capture Swiss Light mode
+        light_path = os.path.join(SCREENSHOTS_DIR, "03_streamlit_light_mode.png")
+        asyncio.run(capture_cdp_screenshot(f"http://localhost:{port}/?theme=light", light_path, width=1440, height=920, wait_seconds=6))
     finally:
         streamlit_proc.terminate()
         streamlit_proc.wait()

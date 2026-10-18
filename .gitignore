@@ -10,8 +10,9 @@ __pycache__/
 *$py.class
 .pytest_cache/
 
-# Streamlit Local Cache
-.streamlit/
+# Streamlit Local Cache & Config
+.streamlit/*
+!.streamlit/config.toml
 
 # Generated Reports & Output Artifacts
 reports/
