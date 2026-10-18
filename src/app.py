@@ -6,20 +6,38 @@ Day 2 — 90 Days 90 Projects Challenge
 
 import io
 import os
+import sys
+
+# Ensure project root is in sys.path for robust module resolution
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 import streamlit as st
 
-from src.parser import parse_csv, detect_encoding, detect_delimiter
-from src.validator import validate_dataset
-from src.profiler import profile_dataset
-from src.quality_engine import calculate_quality_score
-from src.report_generator import (
-    generate_html_report,
-    generate_json_report,
-    generate_markdown_report,
-)
+try:
+    from src.parser import parse_csv, detect_encoding, detect_delimiter
+    from src.validator import validate_dataset
+    from src.profiler import profile_dataset
+    from src.quality_engine import calculate_quality_score
+    from src.report_generator import (
+        generate_html_report,
+        generate_json_report,
+        generate_markdown_report,
+    )
+except ImportError:
+    from parser import parse_csv, detect_encoding, detect_delimiter
+    from validator import validate_dataset
+    from profiler import profile_dataset
+    from quality_engine import calculate_quality_score
+    from report_generator import (
+        generate_html_report,
+        generate_json_report,
+        generate_markdown_report,
+    )
 
 # Page configuration
 st.set_page_config(

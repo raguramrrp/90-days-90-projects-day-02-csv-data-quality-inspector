@@ -18,6 +18,8 @@ echo Local URL: http://localhost:8501
 echo Press Ctrl+C in this window to stop the server.
 echo.
 
+set PYTHONPATH=%~dp0;%PYTHONPATH%
+
 .\.venv\Scripts\streamlit run src/app.py --server.port=8501 --server.headless=false
 
 if %errorlevel% neq 0 (
