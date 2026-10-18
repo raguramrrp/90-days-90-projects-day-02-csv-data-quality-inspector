@@ -8,8 +8,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 > **Day 2 of 90 Days – 90 Projects Challenge**  
-> **Domain:** Data Engineering / Analytics / Data Governance  
-> **Difficulty:** Beginner / Intermediate  
+> **Domain:** Data Engineering / Analytics / Data Governance    
 > **Estimated Build Time:** 4 Hours  
 
 ---
@@ -238,18 +237,6 @@ tests/test_validator.py::test_validate_all_nan_rows_and_cols PASSED      [100%]
 
 ======================== 25 passed, 1 warning in 1.33s ========================
 ```
-
----
-
-## 💼 Resume Skills & Interview Value
-
-- **Target Roles:** Data Engineer, Analytics Engineer, Data Analyst, Data Quality Specialist.
-- **Core Competencies:** Exploratory Data Analysis (EDA), Data Quality Assurance, Statistical Profiling (IQR, Z-Score), Pandas 3.0 Architecture, Data Ingestion Pipelines, Automated Data Governance.
-- **Key Talking Points:**
-  - *"Engineered a modular Python data quality engine with automated delimiter/encoding sniffing and dual outlier detection algorithms."*
-  - *"Created a mathematically grounded 5-pillar data quality scoring rubric (0–100) that evaluates completeness, uniqueness, consistency, outlier health, and structural integrity."*
-  - *"Resolved cross-version compatibility hurdles between Pandas 3.0's StringDtype and NumPy 2.5's boolean subtraction deprecation."*
-  - *"Delivered CI/CD-compatible JSON reporting and standalone interactive HTML audit exports with zero external cloud dependencies."*
 
 ---
 
